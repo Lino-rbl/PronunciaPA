@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/image.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>P_R_osodia</title>
+  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+
+ <body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-xl">P</span>
+        </div>
+        <span class="text-2xl font-bold text-gray-800">PRosodia</span>
+      </div>
+      
+      <nav class="hidden md:flex space-x-8">
+        <a href="#inicio" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Inicio</a>
+        <a href="#caracteristicas" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Características</a>
+        <a href="#testimonios" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Testimonios</a>
+        <a href="#contacto" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Contacto</a>
+      </nav>
+      
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <nav id="mobileMenu" class="hidden md:hidden bg-white border-t">
+      <div class="px-6 py-4 space-y-3">
+        <a href="#inicio" class="block py-2 text-gray-600 hover:text-purple-600 transition-colors">Inicio</a>
+        <a href="#caracteristicas" class="block py-2 text-gray-600 hover:text-purple-600 transition-colors">Características</a>
+        <a href="#testimonios" class="block py-2 text-gray-600 hover:text-purple-600 transition-colors">Testimonios</a>
+        <a href="#contacto" class="block py-2 text-gray-600 hover:text-purple-600 transition-colors">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-white py-20 md:py-32">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="fade-in-up">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">
+          <span class="gradient-text">Cambia</span> tu forma de aprender
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Soluciones innovadoras que impulsan tu crecimiento y maximizan tu potencial
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all transform hover:scale-105">
+            Comenzar Ahora
+          </button>
+          <button class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold text-lg border-2 border-gray-300 hover:border-purple-600 hover:text-purple-600 transition-all transform hover:scale-105">
+            Ver Demo
+          </button>
+        </div>
+      </div>
+      
+      <div class="mt-16 float">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto">
+          <div class="bg-gradient-to-r from-purple-100 to-blue-100 h-64 rounded-xl flex items-center justify-center">
+            <svg class="w-32 h-32 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="caracteristicas" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">¿Por qué elegirnos?</h2>
+        <p class="text-xl text-gray-600">Características que nos hacen diferentes</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="group bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-800">Rápido</h3>
+          <p class="text-gray-600">.....</p>
+        </div>
+        
+        <div class="group bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-800">Seguro</h3>
+          <p class="text-gray-600">....</p>
+        </div>
+        
+        <div class="group bg-gradient-to-br from-indigo-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-800">Escalable</h3>
+          <p class="text-gray-600">....</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonios" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Lo que dicen nuestros clientes</h2>
+        <p class="text-xl text-gray-600">Historias de éxito reales</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              AM
+            </div>
+            <div class="ml-4">
+              <h4 class="font-bold text-lg text-gray-800">Ana Martínez</h4>
+              <p class="text-gray-500">CEO, TechStart</p>
+            </div>
+          </div>
+          <p class="text-gray-600 italic">"Una solución increíble que transformó completamente nuestra forma de trabajar. Los resultados superaron todas nuestras expectativas."</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              CG
+            </div>
+            <div class="ml-4">
+              <h4 class="font-bold text-lg text-gray-800">Carlos García</h4>
+              <p class="text-gray-500">Director, InnovaLab</p>
+            </div>
+          </div>
+          <p class="text-gray-600 italic">"El mejor servicio que hemos probado. Fácil de usar, potente y con un soporte excepcional. Altamente recomendado."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacto" class="py-20 bg-gradient-to-br from-purple-600 to-blue-600 text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">¿Listo para comenzar?</h2>
+      <p class="text-xl mb-8 opacity-90">Únete a miles de personas que ya confían en nosotros</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <input type="email" placeholder="Tu correo electrónico" class="px-6 py-4 rounded-full text-gray-800 text-lg focus:outline-none focus:ring-4 focus:ring-purple-300 w-full sm:w-96">
+        <button class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl">
+          Empezar 
+        </button>
+      </div>
+      <p class="mt-6 text-sm opacity-75">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga et, corporis,.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="flex items-center justify-center space-x-3 mb-6">
+        <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-xl">P</span>
+        </div>
+        <span class="text-2xl font-bold text-white">PRsodia</span>
+      </div>
+      <p class="mb-6">Transformando la manera de aprender desde 2025</p>
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="#" class="hover:text-white transition-colors">Privacidad</a>
+        <a href="#" class="hover:text-white transition-colors">Términos</a>
+        <a href="#" class="hover:text-white transition-colors">Soporte</a>
+      </div>
+      <p class="text-sm opacity-75">© 2025 PRsodia. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          mobileMenu.classList.add('hidden');
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+  </script>
+  </body>
+</html>
